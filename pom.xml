@@ -102,6 +102,7 @@
 			<version>1.8</version>
 		</dependency>
 
+		<!-- 크롤러 -->
 		<dependency>
 			<groupId>edu.uci.ics</groupId>
 			<artifactId>crawler4j</artifactId>
