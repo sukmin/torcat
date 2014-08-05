@@ -1,16 +1,19 @@
 package com.growme.torcat.common;
 
 public class Constant {
-	
 	/**
 	 * 크롤러가 사용하는 File DB 위치
 	 */
-	public static final String CRAWLER_STORAGE_DIRECTORY_PATH = "C:\\Users\\nhn\\Desktop\\crawler";
+	public static String CRAWLER_STORAGE_DIRECTORY_PATH() {
+		return String.format("C:\\Users\\%s\\Desktop\\crawler", System.getProperty("user.name"));
+	}
 	
 	/**
 	 * 크롤링의 결과가 저장되는 디렉토리 위치
 	 */
-	public static final String CRAWLER_RESULT_DIRECTORY_PATH = "C:\\Users\\nhn\\Desktop\\crawler";
+	public static String CRAWLER_RESULT_DIRECTORY_PATH() {
+		return String.format("C:\\Users\\%s\\Desktop\\crawler", System.getProperty("user.name"));
+	}
 	
 	/**
 	 * 크롤링하는 쓰레드의 숫자
@@ -26,5 +29,4 @@ public class Constant {
 	 * 특정사이트에서 User AGENT가 없으면 크롤링을 방어함. 그래서 가짜 User Agent를 등록.
 	 */
 	public static final String FAKE_USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:25.0) Gecko/20100101 Firefox/25.0";
-
 }
